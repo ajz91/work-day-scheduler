@@ -25,3 +25,33 @@ var saveTasks = function() {
 var loadTasks = function() {
     JSON.parse(localStorage.getItem('tasks'));
 }
+
+// handling time by removing/adding classes for past, present, future
+
+function colorCoder() {
+    let checkTime = moment().hour();
+    $('.row').each(function() {
+        let auditTime = parseInt($(this).attr("id").split("hour")[1]);
+
+        if (auditTime < checkTime) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        }
+
+        else if (auditTime === checkTime) {
+            $(this).removeClass("future");
+            $(this).removeClass("past");
+            $(this).addClass("present");
+        }
+
+        else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("future");
+        }
+    })
+
+}
+
+colorCoder();
