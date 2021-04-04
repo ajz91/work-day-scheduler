@@ -76,7 +76,16 @@ textarea{
   max-width:9.333333%;
 }
 
+/* save icon */
 svg {
 font-size:30px;
 text-align:center;
+}
+
+
+/*remove border on textarea */
+textarea {
+  border-style: none; 
+  overflow:auto;
+  outline:none;
 }
