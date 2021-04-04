@@ -69,3 +69,14 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+/* editing width for col-1 to fit time text */
+.col-1 {
+  flex: 1 0 9.333333%;
+  max-width:9.333333%;
+}
+
+svg {
+font-size:30px;
+text-align:center;
+}

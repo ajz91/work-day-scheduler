@@ -1,2 +1,2 @@
 const currentTime = moment();
-$('#currentDay').text(currentTime.format('MMMM Do YY'));
+$('#currentDay').text(currentTime.format('MMMM Do, YYYY'));
