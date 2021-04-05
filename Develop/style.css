@@ -72,8 +72,8 @@ textarea{
 
 /* editing width for col-1 to fit time text */
 .col-1 {
-  flex: 1 0 9.333333%;
-  max-width:9.333333%;
+  flex: 1 0 10.333333%;
+  max-width:10.333333%;
 }
 
 /* save icon */

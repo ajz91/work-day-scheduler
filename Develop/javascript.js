@@ -2,7 +2,6 @@
 const currentTime = moment();
 $('#currentDay').text(currentTime.format('LLLL'));
 
-
 // we need an object to store the tasks
 const tasks = {
     '9': [],
@@ -16,12 +15,6 @@ const tasks = {
     '17': []
 };
 
-// event listener that grabs siblings of all 'row' text and stores
-$('.saveBtn').on('click', function() {
-    let taskText = $(this).siblings('.row').val();
-    var time = $(this).parent().attr("id");
-})
-
 // we need a function to setItem to localStorage
 const saveTasks = function() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -29,7 +22,7 @@ const saveTasks = function() {
 
 // now to we need to retrieve the tasks by parsing
 const loadTasks = function() {
-    JSON.parse(localStorage.getItem('tasks'));
+    JSON.parse(localStorage.getItem("tasks"));
 }
 
 
